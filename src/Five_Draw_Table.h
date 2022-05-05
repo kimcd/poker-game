@@ -8,8 +8,6 @@
  @author Christopher Kim
  */
 
-
-
 #ifndef Five_Draw_Table_h
 #define Five_Draw_Table_h
 
@@ -49,6 +47,7 @@ public:
      */
     Five_Draw_Table(const size_t num_players);
 
+    
     /**
      @brief Initialize a table.
      
@@ -56,37 +55,57 @@ public:
      
      */
     Five_Draw_Table();
-
+    
+    
+    /**
+     @brief Initialize bot players and real players at the table.
+    
+     */
     Five_Draw_Table(const int num_bots, const size_t num_players);
 
+    
     size_t prompt_players() const;
 
+    
     void begin_game();
 
+    
     void open_betting_round();
 
+    
     void discard_round();
 
+    
     std::vector<size_t> showdown_round();
 
+    
     static bool debug_flag;
 
+    
 private:
 
+    
     void print_method(const std::string& method) const;  /*!< Detailed description after the member */
 
+    
     void print_pot() const;  //!< Brief description after the member
 
+    
     std::vector<Player> players;
 
+    
     Dealer dealer;
 
-    size_t ante{50};
+    
+    size_t ante{ANTE};
 
+    
     Pot<int> pot;
 
+    
     std::vector<Player> create_players(const size_t num_players) const;
 
+    
     void collect_ante();
 };
 

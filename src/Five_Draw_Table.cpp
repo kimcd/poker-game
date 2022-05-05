@@ -1,3 +1,14 @@
+/**
+ @file Five_Draw_Table.cpp
+ @brief Five-card draw class implementation.
+ 
+ @section DESCRIPTION
+ Five_Draw_Table orchestrates a game of five-card draw.
+ 
+ @author Christopher Kim
+ @date 
+ */
+
 #include "Five_Draw_Table.h"
 
 using std::vector;
@@ -13,7 +24,6 @@ using std::invalid_argument;
 
 #include <string>
 using std::string;
-
 
 //bool Five_Draw_Table::debug_flag = true;
 
