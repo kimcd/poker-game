@@ -2,7 +2,10 @@
 #ifndef Lessons_Learned_h
 #define Lessons_Learned_h
 
-
+/*
+ Some other lessons.
+ 
+ */
 
 /*
  Five_Draw_Table::Five_Draw_Table(const int num_players)
