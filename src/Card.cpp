@@ -1,7 +1,10 @@
 #include "Card.h"
 
 #include <iostream>
+
 #include <string>
+using std::string;
+
 #include <stdexcept>
 
 //bool Card::debug_flag = false;

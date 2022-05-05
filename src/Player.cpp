@@ -69,7 +69,7 @@ Player::Move Player::pay_ante(int ante)
     		return Player::Move::IN;
     		break;
 		case 'n': case 'N':
-			fold();
+			return fold();
     		break;
 		default:
 			throw std::invalid_argument("Unknown enumeration value ");
