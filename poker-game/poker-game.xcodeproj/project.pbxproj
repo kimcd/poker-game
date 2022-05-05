@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0010596E2823F53E0003301C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 001059612823F5390003301C /* Player.cpp */; };
-		0010596F2823F53E0003301C /* Poker_hand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 001059622823F5390003301C /* Poker_hand.cpp */; };
 		001059702823F53E0003301C /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 001059632823F53A0003301C /* Card.cpp */; };
 		001059712823F53E0003301C /* Five_Draw_Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 001059662823F53A0003301C /* Five_Draw_Table.cpp */; };
 		001059722823F53E0003301C /* Dealer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 001059682823F53B0003301C /* Dealer.cpp */; };
@@ -33,11 +32,9 @@
 		001059522823F5100003301C /* poker-game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "poker-game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0010595C2823F5380003301C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = ../../src/Card.h; sourceTree = "<group>"; };
 		0010595D2823F5380003301C /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = ../../src/Deck.h; sourceTree = "<group>"; };
-		0010595E2823F5380003301C /* Poker_hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Poker_hand.h; path = ../../src/Poker_hand.h; sourceTree = "<group>"; };
 		0010595F2823F5390003301C /* Test_inputs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_inputs.h; path = ../../src/Test_inputs.h; sourceTree = "<group>"; };
 		001059602823F5390003301C /* Lessons_Learned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons_Learned.h; path = ../../src/Lessons_Learned.h; sourceTree = "<group>"; };
 		001059612823F5390003301C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../../src/Player.cpp; sourceTree = "<group>"; };
-		001059622823F5390003301C /* Poker_hand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Poker_hand.cpp; path = ../../src/Poker_hand.cpp; sourceTree = "<group>"; };
 		001059632823F53A0003301C /* Card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Card.cpp; path = ../../src/Card.cpp; sourceTree = "<group>"; };
 		001059642823F53A0003301C /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../../src/Player.h; sourceTree = "<group>"; };
 		001059652823F53A0003301C /* Dealer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dealer.h; path = ../../src/Dealer.h; sourceTree = "<group>"; };
@@ -92,8 +89,6 @@
 				001059602823F5390003301C /* Lessons_Learned.h */,
 				001059612823F5390003301C /* Player.cpp */,
 				001059642823F53A0003301C /* Player.h */,
-				001059622823F5390003301C /* Poker_hand.cpp */,
-				0010595E2823F5380003301C /* Poker_hand.h */,
 				0010596A2823F53C0003301C /* Pot.h */,
 				0010596D2823F53D0003301C /* SCRATCHPAD.cpp */,
 				001059672823F53B0003301C /* SCRATCHPAD.h */,
@@ -161,7 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				001059702823F53E0003301C /* Card.cpp in Sources */,
-				0010596F2823F53E0003301C /* Poker_hand.cpp in Sources */,
 				001059722823F53E0003301C /* Dealer.cpp in Sources */,
 				001059712823F53E0003301C /* Five_Draw_Table.cpp in Sources */,
 				001059752823F53E0003301C /* SCRATCHPAD.cpp in Sources */,
