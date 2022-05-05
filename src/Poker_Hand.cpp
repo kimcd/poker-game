@@ -7,7 +7,7 @@
  */
 
 #include "Card.h"
-#include "Poker_hand.h"
+#include "Poker_Hand.h"
 
 #include <iostream>
 using std::ostream;
