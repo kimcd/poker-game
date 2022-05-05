@@ -14,6 +14,7 @@
 		001059732823F53E0003301C /* test_driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 001059692823F53C0003301C /* test_driver.cpp */; };
 		001059742823F53E0003301C /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0010596B2823F53D0003301C /* Deck.cpp */; };
 		001059752823F53E0003301C /* SCRATCHPAD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0010596D2823F53D0003301C /* SCRATCHPAD.cpp */; };
+		00105978282403DF0003301C /* Poker_Hand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00105976282403DE0003301C /* Poker_Hand.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		0010596B2823F53D0003301C /* Deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Deck.cpp; path = ../../src/Deck.cpp; sourceTree = "<group>"; };
 		0010596C2823F53D0003301C /* Five_Draw_Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Five_Draw_Table.h; path = ../../src/Five_Draw_Table.h; sourceTree = "<group>"; };
 		0010596D2823F53D0003301C /* SCRATCHPAD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SCRATCHPAD.cpp; path = ../../src/SCRATCHPAD.cpp; sourceTree = "<group>"; };
+		00105976282403DE0003301C /* Poker_Hand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Poker_Hand.cpp; path = ../../src/Poker_Hand.cpp; sourceTree = "<group>"; };
+		00105977282403DE0003301C /* Poker_Hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Poker_Hand.h; path = ../../src/Poker_Hand.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 		001059542823F5100003301C /* poker-game */ = {
 			isa = PBXGroup;
 			children = (
+				00105976282403DE0003301C /* Poker_Hand.cpp */,
+				00105977282403DE0003301C /* Poker_Hand.h */,
 				001059632823F53A0003301C /* Card.cpp */,
 				0010595C2823F5380003301C /* Card.h */,
 				001059682823F53B0003301C /* Dealer.cpp */,
@@ -157,6 +162,7 @@
 			files = (
 				001059702823F53E0003301C /* Card.cpp in Sources */,
 				001059722823F53E0003301C /* Dealer.cpp in Sources */,
+				00105978282403DF0003301C /* Poker_Hand.cpp in Sources */,
 				001059712823F53E0003301C /* Five_Draw_Table.cpp in Sources */,
 				001059752823F53E0003301C /* SCRATCHPAD.cpp in Sources */,
 				001059742823F53E0003301C /* Deck.cpp in Sources */,
