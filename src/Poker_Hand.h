@@ -1,21 +1,16 @@
-
-/*
- * Poker_Hand.h
- *
- *  Created on: Apr 22, 2022
- *      Author: kimcd1
- */
-
-/*
-
- TODO:
- 1. use fully qualified names for standard functions.
- 1. add a remove to remove card from hand.
- 2. add an add to add card to hand.
- 3. do the unique values thing with a map instead of array.
- 4.
-
-
+/**
+ @file Five_Draw_Table.h
+ @brief Five-card draw class definition.
+ 
+ @section DESCRIPTION
+ Five_Draw_Table orchestrates a game of five-card draw.
+ 
+ @TODO
+ add a remove to remove card from hand.
+ add an add to add card to hand.
+ do the unique values thing with a map instead of array.
+ 
+ @author Christopher Kim
  */
 
 #ifndef POKER_HAND_H_

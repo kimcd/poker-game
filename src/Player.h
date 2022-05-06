@@ -1,11 +1,22 @@
-/*
+/**
+ @file Five_Draw_Table.h
+ @brief Five-card draw class definition.
+ 
+ @section DESCRIPTION
+ Five_Draw_Table orchestrates a game of five-card draw.
+ 
+ @TODO
+ Player identification. Does it matter?
+ Players own hands.
+ Players need to bet.
+ Players need to trade cards.
+ Players need to accept new cards?
+ Players need to
+ 
+ @author Christopher Kim
+ */
 
- - Player identification. Does it matter?
- - Players own hands.
- - Players need to bet.
- - Players need to trade cards.
- - Players need to accept new cards?
- - Players need to
+
 
  */
 

@@ -1,3 +1,16 @@
+/**
+ @file Five_Draw_Table.h
+ @brief Five-card draw class definition.
+ 
+ @section DESCRIPTION
+ Five_Draw_Table orchestrates a game of five-card draw.
+ 
+ @TODO
+
+ 
+ @author Christopher Kim
+ */
+
 #ifndef Pot_h
 #define Pot_h
 

@@ -6,7 +6,6 @@
  Five_Draw_Table orchestrates a game of five-card draw.
 
  @author Christopher Kim
- @date THis is the date. 
  */
 
 #ifndef Five_Draw_Table_h
