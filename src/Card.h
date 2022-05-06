@@ -1,5 +1,5 @@
 /**
- @file Five_Draw_Table.h
+ @file Card.h
  @brief Five-card draw class definition.
  
  @section DESCRIPTION

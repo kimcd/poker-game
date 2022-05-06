@@ -1,6 +1,6 @@
 /**
- @file Five_Draw_Table.h
- @brief Five-card draw class definition.
+ @file Dealer.h
+ @brief Dealer class definition. 
  
  @section DESCRIPTION
  Five_Draw_Table orchestrates a game of five-card draw.

@@ -1,5 +1,5 @@
 /**
- @file Five_Draw_Table.h
+ @file Poker_Hand.h
  @brief Five-card draw class definition.
  
  @section DESCRIPTION

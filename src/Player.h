@@ -1,9 +1,8 @@
 /**
- @file Five_Draw_Table.h
- @brief Five-card draw class definition.
+ @file Player.h
+ @brief Player class definition.
  
  @section DESCRIPTION
- Five_Draw_Table orchestrates a game of five-card draw.
  
  @TODO
  Player identification. Does it matter?
