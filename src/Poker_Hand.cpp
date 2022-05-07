@@ -39,7 +39,7 @@ using std::multimap;
 
 //bool Poker_Hand::debug_flag = true;
 
-void Poker_Hand::print_method(const std::string& method) const
+void Poker_Hand::print_method(const string& method) const
 {
     if(debug_flag)
     {

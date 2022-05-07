@@ -61,7 +61,7 @@ public:
     };
 
     /*
-     * @brief Default construction to allow for default constructio when game
+     * @brief Default construction to allow for default construction when game
      * begins.
      */
     Poker_Hand();
@@ -112,7 +112,9 @@ public:
 
 private:
     static bool debug_flag;
+    
     void print_method(const std::string& method) const;
+    
     std::vector<Card> vec_cards;
 
     /*
@@ -121,18 +123,31 @@ private:
      */
     bool is_same_suits() const;
 
-
-    /*
-     * @brief Test if Cards in Hand are consecutive in value.
-     * @return True if consecutive. Otherwise, false.
+    /**
+     @brief Test if Cards in Hand are consecutive in value.
+     
+     Construct a five-draw game by passing the number of players at a game.
+     Validates number of players.
+     
+     @param mm Multi-map containing <frequency, card value as int>
+     
+     @return True if consecutive. Otherwise, false.
      */
-    inline bool is_consecutive(std::multimap<size_t, int, std::greater<size_t>>& mm) const
+    inline bool is_consecutive(const std::multimap<size_t, int,
+                               std::greater<size_t>>& mm) const
     {
 
-        if(mm.size() != 5) return false;
-
-        auto max_it = std::max_element(std::begin(mm), std::end(mm),
-                                       [](const auto& l, const auto& r) { return l.second < r.second; });
+        if(mm.size() != MAX_CARDS) return false;    // if multi-map is < 5,
+                                                    // then no need to even
+                                                    // test. <5 means repeats.
+        
+        auto max_it = std::max_element(std::begin(mm),
+                                       std::end(mm),
+                                       [](const auto& l, const auto& r)
+        {
+            return l.second < r.second;
+            
+        });
 
         int i = 0;
 
@@ -153,7 +168,8 @@ private:
     /*
      * @brief Determine whether Hand contains at least a single pair.
      */
-    inline bool is_contain_pair(std::multimap<size_t, int, std::greater<size_t>>& mm) const
+    inline bool is_contain_pair(const std::multimap<size_t,
+                                int, std::greater<size_t>>& mm) const
     {
         return (mm.count(2) > 0) ? true : false;
     }
@@ -162,7 +178,8 @@ private:
     /*
      * @brief Tests if Hand contains exactly one pair rather than 2 pairs or no pairs.
      */
-    inline bool is_contain_one_pair(std::multimap<size_t, int, std::greater<size_t>>& mm) const
+    inline bool is_contain_one_pair(const std::multimap<size_t,
+                                    int, std::greater<size_t>>& mm) const
     {
         return (mm.count(2) == 1) ? true : false;
     }
@@ -171,7 +188,8 @@ private:
     /*
      * @brief Determine if Hand contains 3 cards of identical value.
      */
-    inline bool is_contain_triple(std::multimap<size_t, int, std::greater<size_t>>& mm) const
+    inline bool is_contain_triple(const std::multimap<size_t,
+                                  int, std::greater<size_t>>& mm) const
     {
         return (mm.count(3) == 1) ? true : false;
     }
@@ -180,7 +198,8 @@ private:
     /* @brief Determine if Hand contains 4 cards of identical value.
      *
      */
-    inline bool is_contain_quadruple(std::multimap<size_t, int, std::greater<size_t>>& mm) const
+    inline bool is_contain_quadruple(const std::multimap<size_t,
+                                     int, std::greater<size_t>>& mm) const
     {
         return (mm.count(4) == 1) ? true : false;
     }
@@ -189,7 +208,8 @@ private:
     /*
      * @brief Test if Hand contains exactly two pairs.
      */
-    bool is_contain_two_pairs(std::multimap<size_t, int, std::greater<size_t>>& mm) const
+    bool is_contain_two_pairs(std::multimap<size_t,
+                              int, std::greater<size_t>>& mm) const
     {
         return (mm.count(2) == 2) ? true : false;
     }
