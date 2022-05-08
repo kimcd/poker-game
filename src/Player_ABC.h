@@ -13,7 +13,6 @@
 #include <cmath>  // std::nan
 
 
-
 class Player_ABC
 {
 public:
@@ -44,6 +43,9 @@ public:
      */
     virtual ~Player_ABC() {}
     
+    /*
+     @brief Pure virtual I/O interface for paying ante. 
+    */
     virtual Player_ABC::Move pay_ante(int ante) = 0; 
     
     
@@ -78,12 +80,17 @@ public:
     virtual Player_ABC::Move bet_or_check(int& amount) = 0;
     
     
+    /*
+     @brief
+     */
     inline unsigned int get_player_id() const
     {
         return player_id; 
     }
     
-    
+    /*
+     @brief
+     */
     inline void pay_up(int amount)
     {
         
@@ -147,9 +154,9 @@ public:
     
     
     /*
-     @brief
+     @brief Drestruct object.
      */
-    virtual ~Human() {}
+    virtual ~Human() { print_method("Destructor"); }
     
     /*
      @brief
@@ -177,12 +184,24 @@ class Computer : public Player_ABC
 {
 public:
     
+    /*
+     @brief
+     */
     Computer(const unsigned int player_id);
     
-    virtual ~Computer() {}
+    /*
+     @brief Destruct object.
+     */
+    virtual ~Computer() { print_method("Destructor"); }
     
+    /*
+     @brief Strategy for betting/checking.
+     */
     virtual Player_ABC::Move bet_or_check(int& amount) override;
     
+    /*
+     @brief Strategy for paying ante.
+     */
     virtual Player_ABC::Move pay_ante(int amount) override;
     
     

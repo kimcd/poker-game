@@ -17,6 +17,10 @@ using std::cin;
 #include <string>
 using std::string;
 
+#include <stdexcept>
+using std::runtime_error;
+using std::invalid_argument;
+
 
 Player_ABC::Player_ABC(unsigned int player_id)
 : player_id(player_id)
@@ -80,7 +84,7 @@ Player_ABC::Move Human::pay_ante(int amount)
             return fold();
             break;
         default:
-            throw std::invalid_argument("Unknown enumeration value ");
+            throw invalid_argument("Unknown enumeration value.");
             break;
     }  // end switch
 }  // end pay_ante
@@ -107,7 +111,7 @@ void Computer::print_method(const string& method) const
     if(debug_flag)
     {
         cerr << "Computer::" << method << endl;
-    }
+    }  // end if
 }  // end print_method
 
 
