@@ -26,16 +26,17 @@ using std::sort;
 using std::max_element;
 using std::find;
 using std::greater;
+using std::count;
 
 #include <iomanip>  // setw
 using std::setw;
 
-using std::count;
-
 #include <map>
 using std::map;
 using std::multimap;
+using std::pair;
 
+//typedef multimap<size_t, int, greater<size_t>> card_frequency_mm;
 
 //bool Poker_Hand::debug_flag = true;
 
@@ -80,8 +81,9 @@ void Poker_Hand::emplace(const Card& card)
 {
     if(vec_cards.size() < MAX_CARDS)
     {
-        // noticing how i am emplacing_back by returning the card's value and suit
-        // try vec_cards.emplace_back(card)... if we do it this way, we are calling hte
+        // noticing how i am emplacing_back by returning the card's value and
+        // suit try vec_cards.emplace_back(card)... if we do it this way, we
+        // are calling the
         // copy constructor
         vec_cards.emplace_back(card.get_value(), card.get_suit());
     }
@@ -98,7 +100,8 @@ vector<string> Poker_Hand::get_pretty_hand() const
 
     for(auto& card : vec_cards)
     {
-        pretty_hand.emplace_back(get_pretty_card(card.get_value_enum(), card.get_suit_enum()));
+        pretty_hand.emplace_back(get_pretty_card(card.get_value_enum(),
+                                                 card.get_suit_enum()));
     }
 
     return pretty_hand;
@@ -128,7 +131,7 @@ Poker_Hand::Hand_type Poker_Hand::get_hand_type() const
 
     Poker_Hand::Hand_type hand_type;
 
-    multimap<size_t, int, std::greater<size_t>> card_value_frequency_mm;
+    multimap<size_t, int, greater<size_t>> card_value_frequency_mm;
     card_value_frequency_mm = get_card_value_frequency();
 
     if(is_same_suits() && is_consecutive(card_value_frequency_mm)) {
@@ -170,14 +173,14 @@ Poker_Hand::Hand_type Poker_Hand::get_hand_type() const
 }
 
 
-std::multimap<size_t, int, std::greater<size_t>> Poker_Hand::get_card_value_frequency() const
+multimap<size_t, int, greater<size_t>> Poker_Hand::get_card_value_frequency() const
 {
 
     // third parameter sorts map by decreasing key order (i.e. higher card value on top)
-    map<int, size_t, std::greater<int> > card_value_frequency;
+    map<int, size_t, greater<int> > card_value_frequency;
 
     vector<int> card_values;
-    card_values.reserve(5);
+    card_values.reserve(MAX_CARDS);
 
     for(auto& card : vec_cards)
     {
@@ -195,14 +198,14 @@ std::multimap<size_t, int, std::greater<size_t>> Poker_Hand::get_card_value_freq
     // for each card value in unique_cards, find the frequency in card_values
     for(auto& card_value : unique_cards)
     {
-        card_value_frequency.insert(std::pair<int, size_t>(card_value,
-                                                           std::count(card_values.begin(), card_values.end(), card_value)));
+        card_value_frequency.insert(pair<int, size_t>(card_value,
+                                                           count(card_values.begin(), card_values.end(), card_value)));
     }
 
     // a multimap is like a map except, it may have multiple elements
     // with the same key. additionally, we are going to sort frequency
     // in descending order
-    std::multimap< size_t, int, std::greater<size_t> > card_value_frequency_mm;
+    multimap< size_t, int, greater<size_t> > card_value_frequency_mm;
 
     for (auto& it : card_value_frequency) {
         card_value_frequency_mm.insert({ it.second, it.first });

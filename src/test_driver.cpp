@@ -4,6 +4,7 @@
 #include "SCRATCHPAD.h"
 #include "Poker_Hand.h"
 #include "Dealer.h"
+#include "Player_ABC.h"
 
 #include <iostream>
 using std::cerr;
@@ -66,6 +67,13 @@ void run_poker_game()
     game.begin_game();
 }
 
+void run_test_player_abc()
+{
+    test_player_abc();
+    
+}
+
+bool Player_ABC::debug_flag = true;
 bool Card::debug_flag = false;
 bool Deck::debug_flag = false;
 bool Player::debug_flag = false;
@@ -74,6 +82,7 @@ bool Five_Draw_Table::debug_flag = false;
 bool Poker_Hand::debug_flag = false;
 
 int main(int argc, const char * argv[]) {
+    run_test_player_abc();
     /*
 
     test_card_unique();
@@ -93,7 +102,7 @@ int main(int argc, const char * argv[]) {
 
     //rank_design();
     //remove_vector();
-    run_poker_game();
+    //run_poker_game();
     //selection_design();
     //raise_design();
 

@@ -136,7 +136,6 @@ Card::Value int_to_card_value(const int value)
 
     }
     return val;
-
 }
 
 

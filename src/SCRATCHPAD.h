@@ -3,7 +3,7 @@
 //  module_12
 //
 //  Created by Christopher Kim on 4/22/22.
-//  Copyright © 2022 Christopher Kim. All rights reserved.
+//  Copyright ï¿½ 2022 Christopher Kim. All rights reserved.
 //
 
 
@@ -73,5 +73,7 @@ void print_multimap(std::multimap< size_t, int, std::greater<size_t> >& mm);
 void remove_vector();
 
 void print_vector(std::vector<size_t>& vec);
+
+void test_player_abc(); 
 
 #endif /* SCRATCHPAD_h */

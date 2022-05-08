@@ -3,13 +3,14 @@
 //  module_12
 //
 //  Created by Christopher Kim on 4/22/22.
-//  Copyright © 2022 Christopher Kim. All rights reserved.
+//  Copyright ï¿½ 2022 Christopher Kim. All rights reserved.
 //
 
 #include "SCRATCHPAD.h"
 #include "Poker_Hand.h"
 #include "Player.h"
 #include "Deck.h"
+#include "Player_ABC.h"
 
 
 #include <map>
@@ -823,4 +824,14 @@ void selection_design()
     p1.discard_round();
 
 
+}
+
+void test_player_abc()
+{
+    Human human1(1);
+    human1.add_card(Card(2,1));
+    human1.add_card(Card(2,2)); 
+    human1.print_hand();
+    
+    
 }

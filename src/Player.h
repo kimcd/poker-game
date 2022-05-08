@@ -60,7 +60,7 @@ public:
 
     inline bool is_hand_full() const
     {
-        return (hand.get_quantity() < 5) ? false : true;
+        return (hand.get_quantity() < Poker_Hand::MAX_CARDS) ? false : true;
     }
 
 
