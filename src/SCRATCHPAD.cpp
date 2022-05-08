@@ -34,6 +34,7 @@ using std::vector;
 
 #include <algorithm>
 using std::sort;
+using std::adjacent_find;
 
 #include <iterator>
 using std::distance;
@@ -833,5 +834,16 @@ void test_player_abc()
     human1.add_card(Card(2,2)); 
     human1.print_hand();
     
+    Computer computer1(1);
+    computer1.add_card(Card(2,1));
+    computer1.add_card(Card(2,1));
     
+    vector<int> my_vec = { 1, 2, 3, 4, 5};
+    
+    std::count(my_vec.begin(), my_vec.end(), 3) == true ? cout << "yes\n" : cout << "no";
+    
+    vector<Card> cards = {Card(3, 2), Card(3, 4)};
+    
+    //std::count(cards.begin(), cards.end(), Card(3,2)) == true ? cout << "yes\n" : cout << "no";
+
 }
