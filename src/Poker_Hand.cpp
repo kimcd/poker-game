@@ -36,6 +36,9 @@ using std::map;
 using std::multimap;
 using std::pair;
 
+#include <stdexcept>
+using std::runtime_error;
+
 //typedef multimap<size_t, int, greater<size_t>> card_frequency_mm;
 
 //bool Poker_Hand::debug_flag = true;
@@ -79,13 +82,21 @@ void Poker_Hand::push_back(const Card& card)
 
 void Poker_Hand::emplace(const Card& card)
 {
-    if(vec_cards.size() < MAX_CARDS)
+    
+    // Prevent from adding same Card twice.
+    if(count(vec_cards.begin(), vec_cards.end(), card))
+    {
+        throw runtime_error("Invalid card. This card already exists in this hand." );
+    } else if(vec_cards.size() < MAX_CARDS)
     {
         // noticing how i am emplacing_back by returning the card's value and
         // suit try vec_cards.emplace_back(card)... if we do it this way, we
         // are calling the
         // copy constructor
         vec_cards.emplace_back(card.get_value(), card.get_suit());
+    } else
+    {
+        throw runtime_error("Hand is full."); 
     }
 
     // else statement for full?

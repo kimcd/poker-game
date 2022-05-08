@@ -22,6 +22,8 @@ class Card {
     // use a const reference, so as not to make copies when streaming see
     // poker_hand overloaded operator<<
     friend std::ostream& operator<<(std::ostream&, const Card& card_obj);
+    
+
 
 public:
 	enum class Value {
@@ -57,6 +59,13 @@ public:
     Card(const int value, const int suit);
 
     Card(const Card &card_object);
+    
+    inline bool operator==(const Card& rhs)
+    {
+        return this->value == rhs.value && this->suit == rhs.suit;
+        //return lhs.is_equal(rhs);
+        //return lhs.isEqual( rhs ) && lhs.bar == rhs.bar;
+    }
 
 
     inline Card::Value get_value_enum() const
@@ -73,6 +82,7 @@ public:
 
     //Card::Suit get_suit() const;
 
+    
 
 
     // queue for deletion
@@ -88,6 +98,11 @@ private:
 
     Card::Value value;
     Card::Suit suit;
+    
+    bool is_equal(const Card& rhs) const
+    {
+        return (this->value == rhs.value && this->suit == rhs.suit);
+    }
 
 };
 

@@ -74,6 +74,8 @@ void remove_vector();
 
 void print_vector(std::vector<size_t>& vec);
 
-void test_player_abc(); 
+void test_player_abc();
+
+void test_player_ante(); 
 
 #endif /* SCRATCHPAD_h */

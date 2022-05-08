@@ -836,7 +836,7 @@ void test_player_abc()
     
     Computer computer1(1);
     computer1.add_card(Card(2,1));
-    computer1.add_card(Card(2,1));
+    computer1.add_card(Card(3,1));
     
     vector<int> my_vec = { 1, 2, 3, 4, 5};
     
@@ -844,6 +844,12 @@ void test_player_abc()
     
     vector<Card> cards = {Card(3, 2), Card(3, 4)};
     
-    //std::count(cards.begin(), cards.end(), Card(3,2)) == true ? cout << "yes\n" : cout << "no";
+    std::count(cards.begin(), cards.end(), Card(3,2)) == true ? cout << "yes it's in\n" : cout << "no";
 
+}
+
+void test_player_ante()
+{
+    Human human(1);
+    human.pay_ante( 50); 
 }

@@ -82,7 +82,9 @@ bool Five_Draw_Table::debug_flag = false;
 bool Poker_Hand::debug_flag = false;
 
 int main(int argc, const char * argv[]) {
-    run_test_player_abc();
+    //run_test_player_abc();
+    
+    test_player_ante();
     /*
 
     test_card_unique();
