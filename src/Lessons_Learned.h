@@ -3,6 +3,29 @@
 #define Lessons_Learned_h
 
 /*
+ Pointers are use for 3 reasons:
+ 
+ 1. to allocate new objects onto the heap
+ - objects are placed either in the stack or the heap. when stored in the stack,
+ an object is deleted when it goes out of scopr. however, when stored on the heap,
+ the object is deleted when the program ends (or until you delete it). so you'd
+ use pointers when you want your object to stay around a bit longer
+ 
+ 
+ 2. to pass functions to other functions
+ 
+ 3. to iterate over elements within an array or container
+ 
+ 
+ when to use pionter:
+ https://stackoverflow.com/questions/22146094/why-should-i-use-a-pointer-rather-than-the-object-itself
+ 
+ - Polymorphic behavior
+ to avoid slicing of derived members!!!!
+ 
+ */
+
+/*
  Some other lessons.
  
  */
